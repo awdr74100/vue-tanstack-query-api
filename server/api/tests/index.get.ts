@@ -6,7 +6,7 @@ export default defineEventHandler(async (e) => {
   const { pid } = getQuery<{ pid: string }>(e);
 
   if (pid) {
-    return tests.filter((test) => test.projectId === +pid)
+    return tests.filter((test) => test.projectId === pid);
   } else {
     return tests;
   }

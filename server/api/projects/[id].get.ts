@@ -5,7 +5,7 @@ export default defineEventHandler(async (e) => {
 
   const { id } = getRouterParams(e);
 
-  const project = projects.find((project) => project.id === +id);
+  const project = projects.find((project) => project.id === id);
 
   return project;
 });
