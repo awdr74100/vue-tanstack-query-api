@@ -7,6 +7,10 @@
     "preview": "node .output/server/index.mjs"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
     "nitropack": "latest"
+  },
+  "dependencies": {
+    "nanoid": "^5.0.7"
   }
 }

@@ -1,3 +1,6 @@
+import { faker } from "@faker-js/faker/locale/zh_TW";
+import { nanoid } from "nanoid";
+
 export interface Project {
   id: string;
   title: string;
@@ -8,6 +11,13 @@ export interface Test {
   projectId: string;
   title: string;
   status: number;
+}
+
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+  sex: string;
 }
 
 export const projects: Project[] = [
@@ -63,3 +73,13 @@ export const tests: Test[] = [
     status: 2,
   },
 ];
+
+export const users: User[] = [];
+for (let i = 0; i < 106; i++) {
+  users.push({
+    id: nanoid(),
+    name: faker.person.fullName(),
+    email: faker.internet.email(),
+    sex: faker.person.sex(),
+  });
+}
